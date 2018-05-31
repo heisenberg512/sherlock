@@ -3,11 +3,10 @@ const botconfig = require("botconfig.json");
 
 module.exports.run = async (bot, message, args) => {
   let commandEmbed = new Discord.RichEmbed()
-  .addField("Roll", " t.roll (Rolls a dice)")
+  .addField("roll", " t.roll (Rolls a dice)")
   .addField("doggy", "sends random picture of doggy everytime user enters the command")
-  .addField("avatar", "avatar, t.avatar [user] send the avatar of author or the user tagged to channel")
+  .addField("avatar", "sends the avatar of author or the user tagged infront of it")
   .addField("info", "displays information about the bot.")
-  .addField("coins", "shows the amount of coins you have")
   .setColor(botconfig.purple);
 
   message.delete().catch(O_o => {});
