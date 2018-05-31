@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
   .addField("avatar", "sends the avatar of author or the user tagged infront of it")
   .addField("info", "displays information about the bot.")
   .addField("stats", "displays the time when you joined M.B.R server")
-  .addField("tempmute", "mute members for a limited time")
+  .addField("mute", "mute members for a limited time")
   .setColor(botconfig.purple);
 
   message.delete().catch(O_o => {});
