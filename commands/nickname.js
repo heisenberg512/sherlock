@@ -4,10 +4,9 @@ const botconfig = require("../botconfig.json");
 module.exports.run = async (bot, message, args) => {
   let nuser = message.mentions.users.first();
   let nick = args.slice(1).join(" ");
-  if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Permission denied");
- if(!args[0] || args[0] === "help") return message.reply(`Usage: t.nickname <user> <nick>`);
-  // let organizer = message.guild.roles.find("name", "Head Event Organizer");
-  // if(!message.member.roles.has(organizer.id)) return message.channel.send("fck u fckin fcker bitch");
+ if(!args[0] || args[0] === "help") return message.reply(`Usage: m.nickname <user> <nick>`);
+  let organizer = message.guild.roles.find("name", "Leader");
+  if(!message.member.roles.has(organizer.id)) return;
 
    message.delete();
    message.guild.member(nuser).setNickname(nick);
