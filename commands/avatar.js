@@ -2,8 +2,8 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) =>{
   let user = message.mentions.users.first() || message.author;
-  // let terr = message.guild.roles.find("name", "Terrorists");
-// if(!message.member.roles.has(terr.id)) return message.channel.send("You are not a terrorists member");
+  let mbr = message.guild.roles.find("name", "Leader");
+if(!message.member.roles.has(mbr.id)) return message.channel.send(message.author.avatarURL);
   //avatar avatar embed
     let avatarembed = new Discord.RichEmbed()
     .setAuthor(`${user.username}'s avatar'`)
