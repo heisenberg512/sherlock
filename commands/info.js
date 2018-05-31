@@ -1,18 +1,17 @@
 const Discord = require("discord.js");
-
+const botconfig = require("../botconfig.json");
 
 module.exports.run = async (bot, message, args) => {
 
     let botembed = new Discord.RichEmbed()
-    .setColor("#ce0c5a")
-    .addField("Name", bot.user.username)
-    .addField("Prefix", "t." )
-    .setThumbnail("https://image.ibb.co/bFFFon/bot.png")
-    .addField("Commands", "t.[$Commands] to use a command")
-    .addField("Credits", "created by HeisenBERG#6584")
-    .addField("Created on", bot.user.createdAt);
+    .setColor(botconfig.orange)
+    .setTitle(message.guild.name)
+    .addField("Created On", message.guild.createdAt)
+    .setThumbnail(message.guild.iconURL)
+    .addField("Members", message.guild.memberCount)
+    .addField("Credits", "created by HeisenBERG#6584");
 
-    message.delete();
+    message.delete().catch(O_o => {});
     message.channel.send(botembed);
  }
 
