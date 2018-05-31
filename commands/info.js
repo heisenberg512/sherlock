@@ -9,6 +9,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("Created On", message.guild.createdAt)
     .setThumbnail(message.guild.iconURL)
     .addField("Members", message.guild.memberCount)
+    .addField("Region", message.guild.region)
     .addField("Credits", "created by HeisenBERG#6584");
 
     message.delete().catch(O_o => {});
