@@ -4,7 +4,8 @@ module.exports.run = async (bot, message, args) =>{
   let user = message.mentions.users.first() || message.author;
   let mbr = message.guild.roles.find("name", "Leader");
 if(!message.member.roles.has(mbr.id)) return message.channel.send(message.author.avatarURL);
-  //avatar avatar embed
+  if(!args[0] === "help") return message.channel.send("Usage: m.avatar <user>); 
+   //avatar avatar embed
     let avatarembed = new Discord.RichEmbed()
     .setAuthor(`${user.username}'s avatar'`)
     .setFooter("Bugs Bunny:Nice Avatar")
