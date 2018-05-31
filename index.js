@@ -24,7 +24,7 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is now online`);
-  bot.user.setActivity("Grand Theft Auto San Andreas");
+  bot.user.setActivity("Vagene", {type: "WATCHING"});
 });
 
 bot.on("message", async message => {
