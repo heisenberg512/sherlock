@@ -4,7 +4,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
   let puser = message.mentions.users.first();
   let pm = args.join(" ").slice(22);
- if(message.author.id === "332134348725813248") return message.delete().then(message.channel.send("You don't have permission to use this command").then(msg => msg.delete(5000)));
+ if(message.author.id === "332134348725813248") return;
 
 
   puser.send(pm);
