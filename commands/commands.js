@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
   .addField("doggy", "sends random picture of doggy everytime user enters the command")
   .addField("avatar", "sends the avatar of author or the user tagged infront of it")
   .addField("info", "displays information about the bot.")
-  .addField("stats", "displays the time when you joined M.B.R server)
+  .addField("stats", "displays the time when you joined M.B.R server")
   .addField("tempmute", "mute members for a limited time")
   .setColor(botconfig.purple);
 
