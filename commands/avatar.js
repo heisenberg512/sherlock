@@ -8,7 +8,7 @@ if(!message.member.roles.has(mbr.id)) return message.channel.send(message.author
    //avatar avatar embed
     let avatarembed = new Discord.RichEmbed()
     .setAuthor(`${user.username}'s avatar'`)
-    .setFooter("Bugs Bunny:Nice Avatar")
+    .setFooter("M.B.R:Nice Avatar")
     //footer description
     .setImage(user.displayAvatarURL)
     //user's avtar
