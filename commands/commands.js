@@ -9,6 +9,7 @@ module.exports.run = async (bot, message, args) => {
   .addField("info", "displays information about the bot.")
   .addField("stats", "displays the time when you joined M.B.R server")
   .addField("mute/unmute", "mute/unmute members")
+  .addField("weather", "shows the weather forcast of location entered")
   .setColor(botconfig.purple);
 
   message.delete().catch(O_o => {});
