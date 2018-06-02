@@ -31,17 +31,17 @@ bot.on("message", async message => {
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
 
-//   let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
+  let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
 
-// if(!prefixes[message.guild.id]){
-//   prefixes[message.guild.id] = {
-//     prefixes: botconfig.prefix
-//   };
-// }
+if(!prefixes[message.guild.id]){
+  prefixes[message.guild.id] = {
+    prefixes: botconfig.prefix
+  };
+}
 
-//   let prefix = prefixes[message.guild.id].prefixes;
+  let prefix = prefixes[message.guild.id].prefixes;
   
-  let prefix = botconfig.prefix;
+//   let prefix = botconfig.prefix;
   if(!message.content.startsWith(prefix)) return;
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
