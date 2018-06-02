@@ -2,13 +2,12 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) =>{
   let user = message.mentions.users.first() || message.author;
-  let mbr = message.guild.roles.find("name", "Leader");
-if(!message.member.roles.has(mbr.id)) return message.channel.send(message.author.avatarURL);
-  if(!args[0] === "help") return message.channel.send("Usage: m.avatar <user>"); 
+if(!message.author.hasPermission("MANAGE_SERVER") return message.channel.send(message.author.avatarURL);
+  if(!args[0] === "help") return message.channel.send("Usage: $avatar <user>"); 
    //avatar avatar embed
     let avatarembed = new Discord.RichEmbed()
     .setAuthor(`${user.username}'s avatar'`)
-    .setFooter("M.B.R:Nice Avatar")
+    .setFooter("Nice Avatar")
     //footer description
     .setImage(user.displayAvatarURL)
     //user's avtar
