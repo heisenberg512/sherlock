@@ -2,8 +2,6 @@ const Discord = require("discord.js");
 const superagent = require("superagent");
 
 module.exports.run = async (bot, message, args) => {
-  let terr = message.guild.roles.find("name", "Member");
-if(!message.member.roles.has(terr.id)) return;
   
   let {body} = await superagent
   .get(`https://random.dog/woof.json`);
