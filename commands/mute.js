@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
   //!tempmute @user 1s/m/h/d
 
   let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-  if(!args[0] || args[0] === "help") return message.channel.send("Usage: m.mute <user> <time: eg: 10s/m/h>");
+  if(!args[0] || args[0] === "help") return message.channel.send("Usage: $mute <user> <time: eg: 10s/m/h>");
   if(tomute.hasPermission("ADMINISTRATOR")) return message.reply("Can't mute them!");
   if(tomute.id === "332134348725813248") return;
   if(!message.member.hasPermission("MUTE_MEMBERS")) return;
