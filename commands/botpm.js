@@ -3,8 +3,8 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
   let puser = message.mentions.users.first();
-  let pm = args.join(" ").slice(22);
- if(message.author.id === "332134348725813248") return;
+  let pm = args.slice(1).join(" ");
+
 
 
   puser.send(pm);
