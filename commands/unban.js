@@ -6,7 +6,7 @@
   
   let invite = message.channel.createInvite();
   let embed = new Discord.RichEmbed()
-  .setTitle(Unban Report)
+  .setTitle("Unban Report")
   .addField("Unbanned user", `${tounban.user.username}`)
   .addField("Unbanned by", message.author)
   .setTimestamp();
