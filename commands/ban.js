@@ -3,12 +3,11 @@ const botconfig = require("../botconfig.json");
 
 module.exports.run = async (bot, message, args) => {
 
-     
-     if(!message.author.has("ADMINISTRATOR")) return message.channel.send("Permission Denied");
-     if(!args[0] || args[0] === "help") return message.channel.send("**Usage: ban <user> <reason>**");    
      let toban = message.mentions.members.first();
      let reason = args.slice(1).join(" ");
-     if(toban.hasPermisson("ADMINISTRATOR")) return;
+     if(!message.author.hasPermission("ADMINISTRATOR")) return message.channel.send("Permission Denied");
+     if(!args[0] || args[0] === "help") return message.channel.send("**Usage: ban <user> <reason>**");    
+     if(toban.hasPermission("ADMINISTRATOR")) return;
      
      let bembed = new Discord.RichEmbed()
      .setAuthor(`${toban} has been banned by ${message.auhtor.id}`)
