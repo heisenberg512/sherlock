@@ -11,7 +11,7 @@ let toban = message.mentions.members.first();
      
      let embed = new Discord.RichEmbed()
      .setTitle("Ban report")
-     .addField("Banned user", `${toban.username}`)
+     .addField("Banned user", `${toban.user.username}`)
      .addField("Reason", reason)
      .addField("Banned by", `${message.author}`)
      .setColor(botconfig.green)
