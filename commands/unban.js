@@ -13,8 +13,6 @@
   
   message.delete().catch(O_o=>{});
   tounban.unban;
-  tounban.send(`**You have been unbanned from ${message.guild.name}**`);
-  tounban.send(invite);
   }
   
   
