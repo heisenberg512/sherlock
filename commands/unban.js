@@ -1,8 +1,8 @@
   const Discord = require("discord.js");
   
   module.exports.run = async (bot, message, args) => {
-    let tounban = message.mentions.members.first();
-    if(!args[0] || args[0] === "help") return message.channel.send("Usage: unban <user>");
+    let tounban = args[0];
+    if(!args[0] || args[0] === "help") return message.channel.send("Usage: unban <user id shown in the Ban report>");
   
   let invite = message.channel.createInvite();
   let embed = new Discord.RichEmbed()
