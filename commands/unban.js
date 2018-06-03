@@ -5,7 +5,7 @@
     if(!args[0] || args[0] === "help") return message.channel.send("Usage: unban <user>");
   
   let invite = message.channel.createInvite();
-  let embed = new Discord.RichEmbed();
+  let embed = new Discord.RichEmbed()
   .setTitle(Unban Report)
   .addField("Unbanned user", `${tounban.user.username}`)
   .addField("Unbanned by", message.author)
