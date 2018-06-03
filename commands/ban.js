@@ -18,7 +18,7 @@ let toban = message.mentions.members.first();
      .setTimestamp();
      
      message.delete().catch(O_o=>{});
-     message.guild.member(toban.id).ban(reason);
+     toban.ban(reason);
      message.channel.send(embed);
 }
 
