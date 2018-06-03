@@ -20,6 +20,7 @@ let toban = message.mentions.members.first();
      message.delete().catch(O_o=>{});
      toban.ban(reason);
      message.channel.send(embed);
+     toban.send(`**You were banned from ${message.guild.name} by ${message.author} for ${reason}**`);
 }
 
 
