@@ -11,8 +11,9 @@
   .addField("Unbanned by", message.author)
   .setTimestamp();
   
+  message.channel.send(embed);
   message.delete().catch(O_o=>{});
-  tounban.unban;
+  message.guild.member.unban(tounban);
   }
   
   
