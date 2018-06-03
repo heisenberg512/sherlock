@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const botconfig = require("../botconfig.json");
 
 module.exports.run = async(bot, message, args) => {
-let toban = message.members.mentions.first();
+let toban = message.mentions.members.first();
      let reason  = args.slice(1).join(" ");
      if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("Permission Denied");
      if(toban.hasPermission("ADMINISTRATOR")) return message.reply("I can't mute him");
