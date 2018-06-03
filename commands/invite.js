@@ -1,4 +1,4 @@
-const Discord = requrie("discord.js");
+const Discord = require("discord.js");
 
 module.exports.run = async(bot, message, args) => {
   let invite = message.channel.createInvite();
