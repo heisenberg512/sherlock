@@ -4,7 +4,7 @@ module.exports.run = async(bot, message, args) => {
   let invite = message.channel.createInvite();
   let user = message.mentions.members.first();
   
-  user.send(`${invite}`);
+  user.send(`${invite.code}`);
 
 }
 
