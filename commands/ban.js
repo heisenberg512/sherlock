@@ -9,7 +9,7 @@ let toban = message.mentions.members.first();
      if(!args[0] || args[0] === "help") return message.channel.send("Usage: ban <user> <reason>");
      
      let embed = new Discord.RichEmbed()
-     .setAuthor(`${toban} has been banned`)
+     .setAuthor(`${toban.username} has been banned`)
      .addField("Reason", reason)
      .addField("Banned by", `${message.author}`)
      .setColor(botconfig.green)
