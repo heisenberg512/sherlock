@@ -4,7 +4,7 @@ const botconfig = require("../botconfig.json");
 module.exports.run = async (bot, message, args) => {
 
      
-     if(!message.author.hasPermisson("ADMINISTRATOR")) return message.channel.send("Permission Denied");
+     if(!message.member.hasPermisson("ADMINISTRATOR")) return message.channel.send("Permission Denied");
      if(!args[0] || args[0] === "help") return message.channel.send("**Usage: ban <user> <reason>**");    
      let toban = message.mentions.members.first();
      let reason = args.slice(1).join(" ");
