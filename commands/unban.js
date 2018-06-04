@@ -1,4 +1,5 @@
   const Discord = require("discord.js");
+  const botconfi = require("../botconfig.json");
   
   module.exports.run = async (bot, message, args) => {
     let tounban = args[0];
