@@ -9,6 +9,7 @@
   .setTitle("Unban Report")
   .addField("Unbanned user", `<@${tounban}>`)
   .addField("Unbanned by", message.author)
+  .setColor(botconfig.voilet)
   .setTimestamp();
   
   message.channel.send(embed);
