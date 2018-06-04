@@ -8,7 +8,9 @@ let toban = message.mentions.members.first();
      if(!args[0] || args[0] === "help") return message.channel.send("Usage: ban <user> <time in seconds> <reason>");
      if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("Permission Denied");
      if(toban.hasPermission("ADMINISTRATOR")) return message.reply("I can't ban him");
-
+     if(!reason){
+       let reason = "No reason specified"
+     }
      
        let bantime = args[1];
   if(!bantime) return message.channel.send("Please specify the ban duration");
@@ -20,9 +22,7 @@ let toban = message.mentions.members.first();
     message.channel.send(`**<@${toban.id}> has been unbanned!**`);
   }, ms(bantime));
      
-     if(!reason){
-       let reason = "No reason specified"
-     }
+
      
      let embed = new Discord.RichEmbed()
      .setTitle("Ban report")
