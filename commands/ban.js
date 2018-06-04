@@ -12,7 +12,7 @@ let toban = message.mentions.members.first();
      
        let bantime = args[1];
   if(!bantime) {
-    let bantime = "No time specified"
+    let bantime = "1day"
   } 
 
   await(toban.ban);
