@@ -7,7 +7,7 @@
   
   let embed = new Discord.RichEmbed()
   .setTitle("Unban Report")
-  .addField("Unbanned user", `${tounban}`)
+  .addField("Unbanned user", `<@${tounban}>`)
   .addField("Unbanned by", message.author)
   .setTimestamp();
   
