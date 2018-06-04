@@ -24,7 +24,7 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is now online`);
-  bot.user.setActivity("Sex", {type: "Having"});
+  bot.user.setActivity("with pussy", {type: "Playing"});
 });
 
 bot.on("message", async message => {
