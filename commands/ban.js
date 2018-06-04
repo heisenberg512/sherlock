@@ -11,9 +11,7 @@ let toban = message.mentions.members.first();
 
      
        let bantime = args[1];
-  if(!bantime) {
-    let bantime = "1day"
-  } 
+  if(!bantime) return message.channel.send("Please specify the ban duration");
 
   await(toban.ban);
 
