@@ -17,7 +17,7 @@ let toban = message.mentions.members.first();
 
   setTimeout(function(){
     message.guild.unban(toban);
-    message.channel.send(`**<@{toban.id}> has been unbanned!**`);
+    message.channel.send(`**<@${toban.id}> has been unbanned!**`);
   }, ms(bantime));
      
      let embed = new Discord.RichEmbed()
