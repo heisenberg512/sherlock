@@ -27,7 +27,7 @@ let toban = message.mentions.members.first();
      let embed = new Discord.RichEmbed()
      .setTitle("Ban report")
      .addField("Banned user", `${toban.user.username}#${toban.user.discriminator} **ID:** ${toban.user.id}`)
-     .addField("Reason", reason)
+     .addField("Reason:", `${reason ? reason : "None"}`)
      .addField("Banned by", `${message.author}`)
      .addField("Time", `${ms(ms(bantime))}`)
      .setColor(botconfig.green)
