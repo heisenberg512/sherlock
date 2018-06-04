@@ -4,7 +4,7 @@ const ms = require("ms");
 
 module.exports.run = async(bot, message, args) => {
 let toban = message.mentions.members.first();
-     let reason  = args[4];
+     let reason  = args.slice(3).join(" ");
      if(!args[0] || args[0] === "help") return message.channel.send("Usage: ban <user> <reason>");
      if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("Permission Denied");
      if(toban.hasPermission("ADMINISTRATOR")) return message.reply("I can't ban him");
