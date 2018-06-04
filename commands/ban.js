@@ -9,13 +9,25 @@ let toban = message.mentions.members.first();
      if(toban.hasPermission("ADMINISTRATOR")) return message.reply("I can't mute him");
 
      
+       let bantime = args[1];
+  if(!bantime) return message.reply("You didn't specify a time!");
+
+  await(toban.ban);
+
+  setTimeout(function(){
+    message.guild.unban(toban);
+    message.channel.send(`**{toban}> has been unbanned!**`);
+  }, ms(bantime));
+     
      let embed = new Discord.RichEmbed()
      .setTitle("Ban report")
      .addField("Banned user", `${toban.user.username}#${toban.user.discriminator} **ID:** ${toban.user.id}`)
      .addField("Reason", reason)
      .addField("Banned by", `${message.author}`)
+     .addField("Time", `${ms(ms(bantime))}`)
      .setColor(botconfig.green)
      .setTimestamp();
+     
      
      message.delete().catch(O_o=>{});
      toban.ban(reason);
