@@ -11,7 +11,9 @@ let toban = message.mentions.members.first();
 
      
        let bantime = args[1];
-  if(!bantime) return message.reply("You didn't specify a time!");
+  if(!bantime) {
+    let bantime = "No time specified"
+  } 
 
   await(toban.ban);
 
@@ -19,6 +21,10 @@ let toban = message.mentions.members.first();
     message.guild.unban(toban);
     message.channel.send(`**<@${toban.id}> has been unbanned!**`);
   }, ms(bantime));
+     
+     if(!reason){
+       let reason = "No reason specified"
+     }
      
      let embed = new Discord.RichEmbed()
      .setTitle("Ban report")
