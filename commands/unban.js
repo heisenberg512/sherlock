@@ -13,6 +13,7 @@
   
   message.channel.send(embed);
   message.delete().catch(O_o=>{});
+  message.guild.unban(tounban);
   }
   
   
