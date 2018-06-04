@@ -13,8 +13,6 @@
   
   message.channel.send(embed);
   message.delete().catch(O_o=>{});
-  message.guild.unban(tounban);
-  message.channel.createInvite().then(invite => tounban.send(`https://discord.gg/${invite.code}`));
   }
   
   
