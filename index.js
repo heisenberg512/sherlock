@@ -36,7 +36,7 @@ let notify = guild.channels.find("name", "notifications");
 bot.on("guildMemberRemove", async (member) => {
   const guild = member.guild;
 let notify = guild.channels.find("name", "notifications");
-  notify.send(`<@${member.id}> **has left ${guild.name} Discord server** `);
+  notify.send(`${member.user.username}#${member.user.discriminator} **has left ${guild.name} Discord server** `);
 });
 
 bot.on("message", async message => {
