@@ -33,6 +33,12 @@ let notify = guild.channels.find("name", "notifications");
   notify.send(`Welcome to ${guild.name} server, <@${member.id}> `);
 });
 
+bot.on("guildMemberRemove", async (member) => {
+  const guild = member.guild;
+let notify = guild.channels.find("name", "notifications");
+  notify.send(`<@${member.id}> has left ${guild.name} server `);
+});
+
 bot.on("message", async message => {
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
