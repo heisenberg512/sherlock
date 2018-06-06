@@ -30,13 +30,13 @@ bot.on("ready", async () => {
 bot.on("guildMemberAdd", async (member) => {
   const guild = member.guild;
 let notify = guild.channels.find("name", "notifications");
-  notify.send(`**Welcome to ${guild.name} server**, <@${member.id}> `);
+  notify.send(`**Welcome to ${guild.name} Discord server**, <@${member.id}> `);
 });
 
 bot.on("guildMemberRemove", async (member) => {
   const guild = member.guild;
 let notify = guild.channels.find("name", "notifications");
-  notify.send(`<@${member.id}> **has left ${guild.name} server** `);
+  notify.send(`<@${member.id}> **has left ${guild.name} Discord server** `);
 });
 
 bot.on("message", async message => {
