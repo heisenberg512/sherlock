@@ -6,10 +6,10 @@ module.exports.run = async (bot, message, args) => {
     let botembed = new Discord.RichEmbed()
     .setColor(botconfig.orange)
     .setTitle(message.guild.name)
-    .addField("Created On", message.guild.createdAt)
-    .setThumbnail(message.guild.iconURL)
-    .addField("Members", message.guild.memberCount)
-    .addField("Region", message.guild.region)
+    .addField("Created On", message.guild.createdAt, true)
+    .setThumbnail(message.guild.iconURL, true)
+    .addField("Members", message.guild.memberCount, true)
+    .addField("Region", message.guild.region, true)
     .addField("Credits", "created by HeisenBERG#6584");
 
     message.delete().catch(O_o => {});
