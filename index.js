@@ -49,7 +49,7 @@ if(!prefixes[message.guild.id]){
   
 //   let prefix = botconfig.prefix;
   if(!message.content.startsWith(prefix)) return;
-  let messageArray = message.content.split(" ");
+  let messageArray = message.content.toLowerCase().split(' ')
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
 
