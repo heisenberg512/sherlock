@@ -30,7 +30,7 @@ bot.on("ready", async () => {
 bot.on("guildMemberAdd", async (member) => {
   const guild = member.guild;
 let notify = guild.channels.find("name", "notifications");
-  notify.send(`Welcome to ${guild.name}, <@${member.id}> `);
+  notify.send(`Welcome to ${guild.name} server, <@${member.id}> `);
 });
 
 bot.on("message", async message => {
