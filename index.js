@@ -27,10 +27,10 @@ bot.on("ready", async () => {
   bot.user.setActivity(".", {type: "Playing"});
 });
 
-bot.on("guildMemberAdd", async (guild, member, message) => {
-let notify = message.guild.channels.find("name", "notifications");
-  notify.send(`${member.user.username} has joined the server`);
-});
+// bot.on("guildMemberAdd", async (guild, member, message) => {
+// let notify = message.guild.channels.find("name", "notifications");
+//   notify.send(`${member.user.username} has joined the server`);
+// });
 
 bot.on("message", async message => {
   if(message.author.bot) return;
