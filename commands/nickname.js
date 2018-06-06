@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
   let nuser = message.mentions.users.first();
   let nick = args.slice(1).join(" ");
  if(!args[0] || args[0] === "help") return message.reply(`Usage: $nickname <user> <nick>`);
-if(!message.author.hasPermission("ADMINISTRATOR")) return;
+// if(!message.author.hasPermission("ADMINISTRATOR")) return;
 
    message.delete().catch(O_o=>{});
    message.guild.member(nuser).setNickname(nick);
