@@ -21,5 +21,5 @@ if(!message.author.hasPermission("ADMINISTRATOR")) return;
 }
 
 module.exports.help = {
-  name: "nickname"
+  name: "setname"
 }
