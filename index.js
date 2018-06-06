@@ -27,6 +27,11 @@ bot.on("ready", async () => {
   bot.user.setActivity(".", {type: "Playing"});
 });
 
+bot.on("guildMemberAdd", async (member) => {
+let notify = message.guild.channels.find("name", "notifications");
+  notify.send(`${member.user.username} has joined the server`);
+})
+
 bot.on("message", async message => {
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
