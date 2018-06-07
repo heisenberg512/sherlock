@@ -15,6 +15,7 @@ module.exports.run = async (bot, message, args) => {
  .setTimestamp();
 
 message.delete().catch(O_o=>{});
+message.channel.send(embed); 
 kUser.kick(reason);
 kUser.send(`**You have been kicked from the server ${message.guild.name} for Reason: ${reason}**`);
 }
