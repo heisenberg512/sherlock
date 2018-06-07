@@ -4,7 +4,7 @@ const botconfig = require("../botconfig.json");
 module.exports.run = async (bot, message, args) => {
  let kUser = message.mentions.members.first();
  let reason = args.slice(1).join(" ");
- if(!message.author.hasPermission("ADMINISTRATOR")) return;
+ if(!message.member.hasPermission("ADMINISTRATOR")) return;
  if(!args[0] || args[0] === "help") return message.channel.send("kick <user> <reason>");
  
  let embed = new Discord.RichEmbed()
