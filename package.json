@@ -1,5 +1,5 @@
 {
-  "name": "hroku",
+  "name": "bot",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,10 +9,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@google-cloud/translate": "^1.1.0",
     "discord.js": "^11.3.2",
+    "discord.js-commando": "^0.10.0",
     "fs": "0.0.1-security",
     "ms": "^2.1.1",
+    "npm": "^6.0.1",
+    "samp-query": "^0.1.5",
     "superagent": "^3.8.3",
+    "translate": "^1.0.2",
     "weather-js": "^2.0.0"
   }
 }
