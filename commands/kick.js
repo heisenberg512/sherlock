@@ -1,0 +1,24 @@
+const Discord = require("discord.js");
+const botconfig = require("../botconfig.json");
+
+module.exports.run = async()=> {
+ let kUser = message.mentions.members.first();
+ let reason = args.slice(1).join(" ");
+ if(!message.author.has("ADMINISTRATOR")) return;
+ if(!args[0] || args[0] === "help") return message.channel.send("kick <user> <reason>");
+ 
+ let embed = new Discord.RichEmbed()
+ .setTitle("Kick Report")
+ .setDescription(`${kUser.user.username} has  been kicked by ${message.author}`)
+ .addField("Reason", reason ? reason: none)
+ .setColor(botconfig.voilet)
+ .setTimestamp();
+
+message.delete().catch(O_o=>{});
+kUser.kick(reason);
+}
+
+
+module.exports.help = {
+name: "kick"
+}
