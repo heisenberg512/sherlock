@@ -69,6 +69,10 @@ if(commandfile) commandfile.run(bot, message, args);
     message.reply("Mind your language");
   }
   
+  if(message.content === "creampie"){
+   message.reply("bring your pussy here sexy girl");
+  }
+  
 });
 
 bot.login(process.env.BOT_TOKEN);
