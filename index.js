@@ -45,9 +45,9 @@ bot.on("message", async message => {
 
   let forbidden = ["lesbo, porn, dick, sex, vagene, bobs, vagina, pussy, cum, creampie, bc, mc, bsdk, bhsondrike, bhonsrike"];
   
-  if(message.content.includes(forbidden)){
+  if(message.content.includes("creampie")){
   message.delete().catch(O_o=>{});
-    message.reply("Mind your language");
+    message.reply("Yum yum ur pussy is awesome");
   }
   
      
