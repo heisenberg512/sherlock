@@ -4,7 +4,7 @@ const botconfig = require("../botconfig.json");
 module.exports.run = async (bot, message, args) => {
   let nuser = message.mentions.users.first();
   let nick = args.slice(1).join(" ");
- if(!args[0] || args[0] === "help") return message.reply(`Usage: $nickname <user> <nick>`);
+ if(!args[0] || args[0] === "help") return message.reply(`Usage: setname <user> <nick>`);
 // if(!message.author.hasPermission("ADMINISTRATOR")) return;
 
    message.delete().catch(O_o=>{});
