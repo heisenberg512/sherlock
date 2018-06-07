@@ -11,6 +11,7 @@ module.exports.run = async (bot, message, args) => {
   .addField("stats", "displays the time when you joined M.B.R server")
   .addField("mute/unmute", "mute/unmute members")
   .addField("ban/unban", "ban/unban users")
+  .addField("kick", "kicks a member")
   .addField("weather", "shows the weather forcast of location entered")
   .setColor(botconfig.purple);
 
