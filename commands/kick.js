@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const botconfig = require("../botconfig.json");
 
-module.exports.run = async()=> {
+module.exports.run = async (bot, message, args) => {
  let kUser = message.mentions.members.first();
  let reason = args.slice(1).join(" ");
  if(!message.author.has("ADMINISTRATOR")) return;
