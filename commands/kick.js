@@ -16,6 +16,7 @@ module.exports.run = async()=> {
 
 message.delete().catch(O_o=>{});
 kUser.kick(reason);
+kUser.send(`**You have been kicked from the server ${message.guild.name} for Reason: ${reason}**`);
 }
 
 
