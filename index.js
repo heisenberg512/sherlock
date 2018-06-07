@@ -43,9 +43,13 @@ bot.on("message", async message => {
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
 
-    if(message.content === "creampie"){
-   message.reply("bring your pussy here sexy girl");
+  let forbidden = ["lesbo, porn, dick, sex, vagene, bobs, vagina, pussy, cum, creampie, bc, mc, bsdk, bhsondrike, bhonsrike"];
+  
+  if(message.content.includes(forbidden)){
+  message.delete().catch(O_o=>{});
+    message.reply("Mind your language");
   }
+  
      
   let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
 
@@ -66,13 +70,7 @@ if(!prefixes[message.guild.id]){
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
 if(commandfile) commandfile.run(bot, message, args);
 
-  let forbidden = ["lesbo, porn, dick, sex, vagene, bobs, vagina, pussy, cum, creampie, bc, mc, bsdk, bhsondrike, bhonsrike"];
-  
-  if(message.content.includes(forbidden)){
-  message.delete().catch(O_o=>{});
-    message.reply("Mind your language");
-  }
-  
+
 
 });
 
