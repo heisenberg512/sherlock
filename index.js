@@ -45,7 +45,7 @@ bot.on("message", async message => {
 
   let forbidden = ["lesbo", "porn", "dick", "lund", "sex", "vagene", "bobs", "vagina", "pussy", "cum", "creampie", "bc", "mc", "bsdk", "bhsondrike", "bhonsrike", "gand", "danda", "chodo ga", "phar do ga"];
   
-  if(forbidden.includes(message.content)){
+  if(message.content.includes(forbidden)){
   message.delete().catch(O_o=>{});
     message.reply("mind your language");
   }
