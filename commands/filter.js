@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 modudle.exports.run = async (bot, message, args) => {
-let forbidden = ["porn", "mc", "bc", "fuck, "fck","bsdk","bhonsrike","bhonsdike", "gandu", "gand", "danda", "lund"];
+let forbidden = ["porn", "mc", "bc", "fuck", "fck","bsdk","bhonsrike","bhonsdike", "gandu", "gand", "danda", "lund"];
 const filer = message.content.includes(forbidden);
 const collector = message.channel.createMessageCollector(filter, {time: 300000});
 collector.on('colloect', m => message.channel.send(`Collocted ${m.content}`));
