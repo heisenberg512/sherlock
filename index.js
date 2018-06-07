@@ -43,6 +43,10 @@ bot.on("message", async message => {
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
 
+    if(message.content === "creampie"){
+   message.reply("bring your pussy here sexy girl");
+  }
+     
   let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
 
 if(!prefixes[message.guild.id]){
@@ -69,10 +73,7 @@ if(commandfile) commandfile.run(bot, message, args);
     message.reply("Mind your language");
   }
   
-  if(message.content === "creampie"){
-   message.reply("bring your pussy here sexy girl");
-  }
-  
+
 });
 
 bot.login(process.env.BOT_TOKEN);
