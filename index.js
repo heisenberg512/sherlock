@@ -62,7 +62,9 @@ if(!prefixes[message.guild.id]){
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
 if(commandfile) commandfile.run(bot, message, args);
 
-  if(message.content.includes = 'fuck'){
+  let forbidden = ["lesbo, porn, dick, sex, vagene, bobs, vagina, pussy, cum, creampie, bc, mc, bsdk, bhsondrike, bhonsrike"];
+  
+  if(message.content.includes(forbidden)){
   message.delete().catch(O_o=>{});
     message.reply("Mind your language");
   }
