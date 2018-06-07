@@ -43,9 +43,9 @@ bot.on("message", async message => {
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
 
-  let forbidden = ["lesbo, porn, dick, sex, vagene, bobs, vagina, pussy, cum, creampie, bc, mc, bsdk, bhsondrike, bhonsrike"];
+  let forbidden = ["lesbo", "porn", "dick", "lund", "sex", "vagene", "bobs", "vagina", "pussy", "cum", "creampie", "bc", "mc", "bsdk", "bhsondrike", "bhonsrike", "gand", "danda", "chodo ga", "phar do ga"];
   
-  if(message.content.includes("creampie, porn, lesbian, mc, bc, cum, bsdk, bhonsrike, barwa, madar chod, chodo, gand, danda,")){
+  if(forbidden.includes(message.content)){
   message.delete().catch(O_o=>{});
     message.reply("mind your language");
   }
