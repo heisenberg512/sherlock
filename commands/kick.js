@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
  let embed = new Discord.RichEmbed()
  .setTitle("Kick Report")
  .setDescription(`${kUser.user.username} has  been kicked by ${message.author}`)
- .addField("Reason", reason ? reason: none)
+ .addField("Reason", `${reason ? reason: "None"}`)
  .setColor(botconfig.voilet)
  .setTimestamp();
 
