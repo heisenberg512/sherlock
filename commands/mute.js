@@ -35,7 +35,7 @@ module.exports.run = async (bot, message, args) => {
   await(tomute.addRole(muterole.id));
   let embed = new Discord.RichEmbed()
   .setTitle(`Mute report`)
-  .addField("Person Muted", `<@${tomute.id}> hasb been muted`)
+  .addField("Person Muted", `<@${tomute.id}> has been muted`)
   .addField("Muted by", `${message.author}`)
   .setColor(botconfig.puke)
   .addField("Reason", `${reason ? reason: "none"}`)
