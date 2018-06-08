@@ -8,10 +8,11 @@ module.exports.run = async (bot, message, args) => {
   .addField("doggy", "sends random picture of doggy everytime user enters the command")
   .addField("avatar", "sends the avatar of author or the user tagged infront of it")
   .addField("info", "displays information about the bot.")
-  .addField("stats", "displays the time when you joined M.B.R server")
+  .addField("stats", "displays the time when you joined M.B.R Discord server")
   .addField("mute/unmute", "mute/unmute members")
   .addField("ban/unban", "ban/unban users")
   .addField("kick", "kicks a member")
+  .addField("Translate", "translates text into the language user inputs")
   .addField("weather", "shows the weather forcast of location entered")
   .setColor(botconfig.purple);
 
