@@ -37,8 +37,8 @@ module.exports.run = async (bot, message, args) => {
   message.channel.send(`**<@${tomute.id}> has been muted for ${ms(ms(mutetime))}**`);
 
   setTimeout(function(){
+    if(!tomute.roles.has(muterole.id)) return;
     tomute.removeRole(muterole.id);
-    message.channel.send(`**<@${tomute.id}> has been unmuted!**`);
   }, ms(mutetime));
 
 
