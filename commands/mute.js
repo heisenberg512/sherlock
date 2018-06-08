@@ -30,9 +30,6 @@ module.exports.run = async (bot, message, args) => {
       console.log(e.stack);
     }
   }
-  //end of create role
-  let mutetime = args[1];
-  if(!mutetime) return message.reply("You didn't specify a time!");
 
   await(tomute.addRole(muterole.id));
   let embed = new Discord.RichEmbed()
