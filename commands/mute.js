@@ -36,6 +36,9 @@ module.exports.run = async (bot, message, args) => {
   .setTitle(`${tomute.username} has been muted`)
   .addField("Muted by", `${message.author}`)
   .addField("Reason", `${reason ? reason: "none"}`);
+  
+  message.delete().catch(O_o=>{});
+  message.channel.send(embed);
   //end of module
 }
 
