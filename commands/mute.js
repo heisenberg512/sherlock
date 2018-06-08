@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const ms = require("ms");
+const botconfig = require("../botconfig.json");
 
 module.exports.run = async (bot, message, args) => {
 
@@ -33,9 +34,12 @@ module.exports.run = async (bot, message, args) => {
 
   await(tomute.addRole(muterole.id));
   let embed = new Discord.RichEmbed()
-  .setTitle(`${tomute.username} has been muted`)
+  .setTitle(`Mute report`)
+  .addField("Person Muted", `<@${tomute.id}> hasb been muted`)
   .addField("Muted by", `${message.author}`)
-  .addField("Reason", `${reason ? reason: "none"}`);
+  .setColor(botconfig.puke)
+  .addField("Reason", `${reason ? reason: "none"}`)
+  .setTimestamp();
   
   message.delete().catch(O_o=>{});
   message.channel.send(embed);
