@@ -6,7 +6,8 @@ module.exports.run = async (bot, message, args) => {
   //!tempmute @user 1s/m/h/d
 
   let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-  if(!args[0] || args[0] === "help") return message.channel.send("Usage: $mute <user> <time in seconds>");
+  let reason = args.slice(1).join(" ");
+  f(!args[0] || args[0] === "help") return message.channel.send("Usage: $mute <user> <reason>");
   if(tomute.hasPermission("ADMINISTRATOR")) return message.reply("Can't mute them!");
   if(tomute.id === "332134348725813248") return;
   if(!message.member.hasPermission("MUTE_MEMBERS")) return;
@@ -34,15 +35,11 @@ module.exports.run = async (bot, message, args) => {
   if(!mutetime) return message.reply("You didn't specify a time!");
 
   await(tomute.addRole(muterole.id));
-  message.channel.send(`**<@${tomute.id}> has been muted for ${ms(ms(mutetime))}**`);
-
-  setTimeout(function(){
-    if(!tomute.roles.has(muterole.id)) return;
-    tomute.removeRole(muterole.id);
-  }, ms(mutetime));
-
-
-//end of module
+  let embed = new Discord.RichEmbed()
+  .setTitle(`${tomute.username} has been muted`)
+  .addField("Muted by", `${message.author}`)
+  .addField("Reason", `${reason ? reason: "none"}`);
+  //end of module
 }
 
 module.exports.help = {
