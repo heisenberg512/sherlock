@@ -9,7 +9,7 @@ module.exports.run = async(bot, message, args) => {
    .setTitle("Google Translator")
    .addField("Real text", args.slice(1).join(" "))
    .addField("Translated Text", res.text)
-   .setColot(botconfig.voilet)
+   .setColor(botconfig.voilet)
    .setTimestamp();
    
    message.delete().catch(O_o=>{});
