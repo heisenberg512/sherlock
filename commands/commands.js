@@ -9,6 +9,7 @@ module.exports.run = async (bot, message, args) => {
   .addField("avatar", "sends the avatar of author or the user tagged infront of it")
   .addField("info", "displays information about the bot.")
   .addField("stats", "displays the time when you joined M.B.R Discord server")
+  .addField("purge", "deletes msgs in channels")
   .addField("mute/unmute", "mute/unmute members")
   .addField("ban/unban", "ban/unban users")
   .addField("kick", "kicks a member")
