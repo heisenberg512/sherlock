@@ -47,10 +47,12 @@ module.exports.run = async (bot, message, args) => {
   //end of module
   
   if(message.content === `${text}`){
-    if(message.author.roles.has(muterole.id)).then(msg => msg.delete());
+    if(message.author.roles.has(muterole.id)){
+     message.delete().catch(O_o=>{});  
     message.author.send("You are muted from the server. Please wait for someone to unmute you.");
-  }
-
-module.exports.help = {
+   }
+ }
+}
+  module.exports.help = {
   name: "mute"
 }
