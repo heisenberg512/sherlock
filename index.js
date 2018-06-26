@@ -48,13 +48,6 @@ let notify = guild.channels.find("name", "notifications");
 bot.on("message", async message => {
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
-
-  let forbidden = ["lesbo", "porn", "dick", "lund", "sex", "vagene", "bobs", "vagina", "pussy", "cum", "creampie", "bc", "mc", "bsdk", "bhsondrike", "bhonsrike", "gand", "danda", "chodo ga", "phar do ga"];
-  
-  if(message.content.includes(forbidden)){
-  message.delete().catch(O_o=>{});
-    message.reply("mind your language");
-  }
   
      
   let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
