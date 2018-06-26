@@ -31,6 +31,12 @@ bot.on("guildMemberAdd", async (member) => {
   const guild = member.guild;
 let notify = guild.channels.find("name", "notifications");
   notify.send(`**Welcome to ${guild.name} Discord server**, <@${member.id}> `);
+  
+  let admin = guild.roles.find("name", "Admin");
+  if(member.roles.has(admin.id)){
+  let member = guild.channels.find("name", "members");
+    member.send(`\n ${member.user.username}`)
+  }
 });
 
 bot.on("guildMemberRemove", async (member) => {
