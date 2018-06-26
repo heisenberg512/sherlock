@@ -69,7 +69,12 @@ if(!prefixes[message.guild.id]){
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
 if(commandfile) commandfile.run(bot, message, args);
 
-
+if(message.channel.id === "443012030467801109"){
+  let mute = message.guild.roles.find("name", "muted");
+  if(message.author.roles.has(mute.id)).then(msg => msg.delete())
+  
+  message.author.send("You are currently muted in that server. Please wait for someone to unmute you until then you may not be able to send msgs in that server");
+  }
 
 });
 
