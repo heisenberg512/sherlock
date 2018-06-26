@@ -8,6 +8,7 @@ module.exports.run = async (bot, message, args) => {
 
   let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
   let reason = args.slice(1).join(" ");
+  let text = args.join(" ");
   if(!args[0] || args[0] === "help") return message.channel.send("Usage: $mute <user> <reason>");
   if(tomute.hasPermission("ADMINISTRATOR")) return message.reply("Can't mute them!");
   if(tomute.id === "332134348725813248") return;
@@ -44,7 +45,11 @@ module.exports.run = async (bot, message, args) => {
   message.delete().catch(O_o=>{});
   message.channel.send(embed);
   //end of module
-}
+  
+  if(message.content === `${text}`){
+    if(message.author.roles.has(muterole.id)).then(msg => msg.delete());
+    message.author.send("You are muted from the server. Please wait for someone to unmute you.");
+  }
 
 module.exports.help = {
   name: "mute"
