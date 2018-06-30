@@ -65,11 +65,8 @@ if(!prefixes[message.guild.id]){
 if(commandfile) commandfile.run(bot, message, args);
 
   let mute = message.guild.roles.find("name", "muted");
-  if(message.author.roles.has(mute.id)){
-    message.delete().catch(O_o=>{});
-    message.author.send("Unfortunately you have been muted from the server. Please wait for someone to unmute you.");
-  }
-  
+  if(message.author.roles.has(mute.id)) return message.delete().catch(O_o=>{});
+
 });
 
 bot.login(process.env.BOT_TOKEN);
