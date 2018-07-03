@@ -1,19 +1,10 @@
 const Discord = require("discord.js");
-const superagent = require("superagent");
-
-module.exports.run = async (bot, message, args) => {
-  
-  let {body} = await superagent
-  .get(`http://aws.random.cat/meow.json`);
-
-  let dogEmbed = new Discord.RichEmbed()
-  .setColor(`#ff3212`)
-  .setTitle(`Woah you look nice here bud 🐱`)
-  .setImage(body.url);
-
-  message.channel.send(dogEmbed);
+const app = this.app = express();
+app.use('/cat-api', catApi('/cat-api'));
+ 
+module.exports.run = async(bot, message, args) => {  
+fetch('/cat-api').then((res) => res.json()).then(json => message.channel.send(json))
 }
-
-module.exports.help = {
+  module.exports.help = {
   name: "cat"
 }
