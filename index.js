@@ -64,9 +64,6 @@ if(!prefixes[message.guild.id]){
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
 if(commandfile) commandfile.run(bot, message, args);
 
-  let mute = message.guild.roles.find("name", "muted");
-  if(message.author.roles.has(mute.id)) return message.delete().catch(O_o=>{});
-
 });
 
 bot.login(process.env.BOT_TOKEN);
