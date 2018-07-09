@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
   if(!args[0]) return message.channel.send("Usage: poll <question>", {code:'py'});
   
   let embed = new Discord.RichEmbed()
-  .setTitle(`**Poll created by ${message.author.username}**)
+  .setTitle(`**Poll created by ${message.author.username}**`)
   .setDescription(text)
   .setColor(botconfig.yellow);
   
