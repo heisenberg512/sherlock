@@ -11,9 +11,9 @@ module.exports.run = async (bot, message, args) => {
   .setDescription(text)
   .setColor(botconfig.yellow);
   
-  message.channel.send(embed);
-  await message.react('✅');
-  await message.react('❌');
+  let msg = message.channel.send(embed);
+  await msg.react('✅');
+  await msg.react('❌');
   message.delete().catch(O_o=>{});
 }
 
