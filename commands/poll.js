@@ -9,6 +9,7 @@ module.exports.run = async (bot, message, args, tools) => {
   let embed = new Discord.RichEmbed()
   .setTitle(`**Poll created by ${message.author.username}**`)
   .setDescription(text)
+  .setFooter("Vote either ✅ for YES or ❌ for NO")
   .setColor(botconfig.yellow);
   
   let msg = await message.channel.send(embed);
