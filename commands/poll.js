@@ -3,7 +3,7 @@ const botconfig = require("../botconfig.json");
 
 module.exports.run = async (bot, message, args) => {
   let text = args.join(" ");
-  if(!message.author.hasPermission("ADMINISTRATOR")) return message.delete().catch(O_o=>{});
+//  if(!message.author.hasPermission("ADMINISTRATOR")) return message.delete().catch(O_o=>{});
   if(!args[0]) return message.channel.send("Usage: poll <question>", {code:'py'});
   
   let embed = new Discord.RichEmbed()
