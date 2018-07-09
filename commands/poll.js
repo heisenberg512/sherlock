@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const botconfig = require("../botconfig.json");
 
-module.exports.run = async (bot, message, args) => {
+module.exports.run = async (bot, message, args, tools) => {
   let text = args.join(" ");
 //  if(!message.author.hasPermission("ADMINISTRATOR")) return message.delete().catch(O_o=>{});
   if(!args[0]) return message.channel.send("Usage: poll <question>", {code:'py'});
