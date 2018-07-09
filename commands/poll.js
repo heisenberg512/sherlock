@@ -12,8 +12,8 @@ module.exports.run = async (bot, message, args) => {
   .setColor(botconfig.yellow);
   
   message.channel.send(embed);
-  await message.react(':white_check_mark:');
-  await message.react('negative_squared_cross_mark');
+  await message.react('✅');
+  await message.react('❌');
   message.delete().catch(O_o=>{});
 }
 
