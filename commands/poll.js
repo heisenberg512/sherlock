@@ -15,7 +15,6 @@ module.exports.run = async (bot, message, args, tools) => {
   let msg = await message.channel.send(embed);
   await msg.react('✅');
   await msg.react('❌');
-  if(message.member.reacts('✅')) return message.channel.send("your vote has been casted");
   message.delete().catch(O_o=>{});
 }
 
