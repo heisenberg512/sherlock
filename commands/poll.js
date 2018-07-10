@@ -4,7 +4,7 @@ const botconfig = require("../botconfig.json");
 module.exports.run = async (bot, message, args, tools) => {
   let text = args.join(" ");
   if(!args[0]) return message.channel.send("Usage: poll <question>", {code:'py'});
-  if(!message.author.has("ADMINISTRATOR")) return message.delete().catch(O_o=>{});
+  if(!message.author.hasPermission("ADMINISTRATOR")) return message.delete().catch(O_o=>{});
   
   let embed = new Discord.RichEmbed()
   .setTitle(`**Poll created by ${message.author.username}**`)
