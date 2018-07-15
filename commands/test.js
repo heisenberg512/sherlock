@@ -16,6 +16,17 @@ module.exports.run = async (bot, message, args) => {
   let msg = await message.channel.send(embed);
   await msg.react("➡");
   await msg.react("⬅");
+
+  function (result) {
+    bot.on("messageReactionAdd", (reaction, user) => {
+     if(reaction.message.id === "467948199173292032"){
+      if(reaction.emoji.name === "➡"){
+        msg.edit(embed2);
+      }
+      }
+     }
+    }
+
 }
 
 module.exports.help = {
